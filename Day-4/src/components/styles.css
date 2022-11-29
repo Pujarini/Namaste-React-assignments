@@ -1,0 +1,51 @@
+.heading {
+  /* border: 1px solid; */
+  text-align: center;
+  border-bottom: 5px solid;
+  color: #fff;
+}
+
+.card-list {
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 40px;
+}
+
+.member-card {
+  padding: 5px;
+  background-color: coral;
+  border-radius: 15px;
+  /* border: 1px solid; */
+  height: 320px;
+  text-align: center;
+}
+
+.member-img {
+  border: 1px solid;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.member-name {
+  border-bottom: 1px solid;
+}
+
+.member-org {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.member-details {
+  border: 1px solid;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  height: 250px;
+}

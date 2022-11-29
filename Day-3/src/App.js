@@ -28,6 +28,10 @@ const MainApp = () => {
   );
 };
 
+console.log(MainApp);
+console.log(<MainApp />);
+console.log(MainApp());
+
 const ShowHeading = () => {
   return heading2;
 };
