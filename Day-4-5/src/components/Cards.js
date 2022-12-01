@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 const Cards = ({ data }) => {
-  console.log(data);
   return (
     <div className="card-list">
       {data &&
