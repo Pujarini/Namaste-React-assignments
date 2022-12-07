@@ -6,7 +6,6 @@ const heading = React.createElement(
   { className: "header" },
   "Hello World"
 );
-console.log(heading);
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
 root.render(heading);

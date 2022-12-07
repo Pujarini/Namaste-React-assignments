@@ -19,8 +19,6 @@ const SearchBar = ({ searchRestaurants }) => {
     setSearchText(e.target.value);
   };
 
-  console.log(searchText);
-
   return (
     <div className="search-bar">
       <form onSubmit={formSubmitHandler}>

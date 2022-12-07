@@ -22,13 +22,12 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
-
   padding: 20px;
 }
 
 .card-tag {
   border: 1px solid #fff;
-  height: 450px;
+  height: 500px;
   border-radius: 5px;
   padding: 35px;
   display: flex;
@@ -56,7 +55,8 @@ body {
   border-radius: 5px;
   background-color: #fed669;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .card-tag img {
@@ -73,4 +73,77 @@ body {
   width: 250px;
   text-align: center;
   margin-bottom: 25px;
+}
+
+.user-container {
+  color: #fff;
+  border: 1px solid;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 150px;
+  min-height: 700px;
+  /* max-width: 1000px; */
+  position: relative;
+  padding: 40px;
+}
+
+.user-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50;
+}
+
+.user-title {
+  margin-top: 50px;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 10px;
+}
+
+.user-bio {
+  color: lightgray;
+  font-size: 18px;
+}
+
+.repo-title {
+  margin-top: 15px;
+  color: #fed669;
+}
+
+.repo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  /* width: 250px; */
+}
+
+.repo-item {
+  border: 1px solid;
+  border-radius: 5px;
+  width: 400px;
+  padding: 10px;
+  min-height: 120px;
+}
+.repo-item h2 {
+  margin-bottom: 40px;
+}
+
+.repo-item span {
+  margin-right: 15px;
+  color: #fed669;
+}
+
+.loader {
+  color: #fed669;
+}
+
+.error-msg {
+  color: #fff;
 }

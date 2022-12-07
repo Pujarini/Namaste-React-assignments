@@ -37,6 +37,4 @@ const ShowHeading = () => {
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(heading2);
-//root.render(<ShowHeading/>)
 root.render(<MainApp />);
