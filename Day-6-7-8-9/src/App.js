@@ -34,14 +34,20 @@ const App = () => {
       });
   };
 
+  console.log(memberList);
+
   return (
-    <>
+    <div className="home_page">
       <Header />
-      <SearchBar users={memberList} searchMembers={setMemberList} />
+      <SearchBar
+        users={memberList}
+        searchMembers={setMemberList}
+        fetchUserData={displayUserData}
+      />
       <Suspense fallback={<Loader />}>
         <UserCard data={memberList} />
       </Suspense>
-    </>
+    </div>
   );
 };
 

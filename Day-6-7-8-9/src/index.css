@@ -7,6 +7,13 @@ body {
   background-color: #1d1d1d;
 }
 
+.home_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .header-container {
   height: 80px;
   margin-bottom: 20px;
@@ -14,6 +21,11 @@ body {
   text-align: center;
   padding: 10px;
   font-weight: 500;
+  width: 100%;
+}
+
+.header-container span {
+  margin: 5px;
 }
 
 .card-container {
