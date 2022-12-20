@@ -15,6 +15,7 @@ import AboutUsComponent from "./components/AboutUsComponent";
 import Loader from "./components/Loader";
 import SearchBar from "./components/SearchBar";
 import { fetchUserData } from "./utils/fetchData";
+import ThemeContext from "./components/ThemeContext";
 
 const App = () => {
   const [memberList, setMemberList] = useState([]);
@@ -34,19 +35,19 @@ const App = () => {
       });
   };
 
-  console.log(memberList);
-
   return (
     <div className="home_page">
-      <Header />
-      <SearchBar
-        users={memberList}
-        searchMembers={setMemberList}
-        fetchUserData={displayUserData}
-      />
-      <Suspense fallback={<Loader />}>
-        <UserCard data={memberList} />
-      </Suspense>
+      <ThemeContext.Provider value={the}>
+        <Header />
+        <SearchBar
+          users={memberList}
+          searchMembers={setMemberList}
+          fetchUserData={displayUserData}
+        />
+        <Suspense fallback={<Loader />}>
+          <UserCard data={memberList} />
+        </Suspense>
+      </ThemeContext.Provider>
     </div>
   );
 };

@@ -7,20 +7,15 @@ const SearchBar = ({ searchMembers, users, fetchUserData }) => {
     return users.filter((mem) =>
       mem.login.toLocaleLowerCase().includes(searchText.toLocaleLowerCase())
     );
-    // return users[0];
   };
   const formSubmitHandler = (e) => {
     e.preventDefault();
-    console.log(searchText);
     if (searchText) {
       const restList = filterMembers(searchText);
       searchMembers(restList);
     } else {
       fetchUserData();
     }
-    //
-
-    // searchMembers(restList);
   };
 
   const searchMember = (e) => {

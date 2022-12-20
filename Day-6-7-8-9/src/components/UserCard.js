@@ -1,10 +1,6 @@
 import CardComponent from "./CardComponent";
 
 const UserCard = ({ data }) => {
-  // const [teamData] = useState(data);
-
-  console.log(data);
-
   return (
     <div className="card-container">
       {data.length > 0 &&

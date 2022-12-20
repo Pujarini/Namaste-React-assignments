@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #1d1d1d;
+  background-color: #fff;
+  color: #1d1d1d;
 }
 
 .home_page {
@@ -24,6 +25,10 @@ body {
   width: 100%;
 }
 
+.header-container h2 {
+  color: #1d1d1d;
+}
+
 .header-container span {
   margin: 5px;
 }
@@ -38,7 +43,7 @@ body {
 }
 
 .card-tag {
-  border: 1px solid #fff;
+  border: 1px solid;
   height: 500px;
   border-radius: 5px;
   padding: 35px;
@@ -47,7 +52,7 @@ body {
   justify-content: center;
   flex-direction: column;
   background-color: transparent;
-  color: #fff;
+  /* color: #fff; */
 }
 
 .card-tag h1 {
@@ -88,7 +93,7 @@ body {
 }
 
 .user-container {
-  color: #fff;
+  /* color: #fff; */
   border: 1px solid;
   border-radius: 5px;
   display: flex;
@@ -177,7 +182,7 @@ body {
 .repo-container {
   /* display: flex; */
   border: 1px solid #fff;
-  color: #fff;
+  /* color: #fff; */
   padding: 20px;
   border-radius: 5px;
 }
