@@ -11,7 +11,6 @@ class UserProfile extends Component {
       userDetails: {},
     };
     const { userid } = this.props.params;
-    console.log(userid, this.props);
     console.log("parent - constructor");
   }
 

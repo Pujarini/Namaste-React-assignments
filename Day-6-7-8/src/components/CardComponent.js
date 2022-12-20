@@ -1,16 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CardComponent = ({
-  user,
-  showLink = false,
-  showAllRepos = false,
-  key,
-}) => {
-  console.log(user);
+const CardComponent = ({ user, showLink = false, showAllRepos = false }) => {
   return (
     <div>
-      <div className="card-tag" key={key}>
+      <div className="card-tag" key={user.id}>
         <img src={user.avatar_url} alt={`${user.name || user.login} img`} />
         <h1>{user.name || user.login}</h1>
         <h2 className="card-bio">{user.bio || "Developer"}</h2>

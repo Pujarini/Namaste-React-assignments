@@ -2,6 +2,7 @@ node_modules
 .parcel-cache
 
 dist
+
 .DS_Store
 
 npm-debug.log*

@@ -175,3 +175,69 @@ body {
   flex-wrap: wrap;
   gap: 10px;
 }
+
+.search_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.search_user_container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search_user_container select {
+  outline: none;
+  border: none;
+  margin-right: 10px;
+  height: 25px;
+  border-radius: 15px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.search_user_container button {
+  padding: 5px;
+  border: none;
+  outline: none;
+  background-color: #fed669;
+  cursor: pointer;
+}
+
+.search_container h1 {
+  margin: 20px;
+  color: #fed669;
+}
+
+.user_list_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.no_result_container {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.about_us_container {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.about_us_container span {
+  margin: 30px;
+}
