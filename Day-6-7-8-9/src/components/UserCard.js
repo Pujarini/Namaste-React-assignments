@@ -1,9 +1,8 @@
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { fetchUserData } from "../utils/fetchData";
 import CardComponent from "./CardComponent";
 import SearchBar from "./SearchBar";
 import data from "../data/userGithubDetails.json";
-import Loader from "./Loader";
 
 const UserCard = () => {
   const [memberList, setMemberList] = useState([]);

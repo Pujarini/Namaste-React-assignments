@@ -1,5 +1,3 @@
-import React from "react";
-
 const RepoCard = ({ card }) => {
   return (
     <div className="repo-item">

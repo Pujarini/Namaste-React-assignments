@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { Outlet } from "react-router";
 import { fetchUserData } from "../utils/fetchData";
 import CardComponent from "./CardComponent";

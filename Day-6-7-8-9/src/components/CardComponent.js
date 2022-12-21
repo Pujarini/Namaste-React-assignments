@@ -1,14 +1,9 @@
-import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import ThemeContext from "./ThemeContext";
 
 const CardComponent = ({ user, showLink = false, showAllRepos = false }) => {
-  const { theme } = useContext(ThemeContext);
-  console.log(theme);
   return (
-    // <ThemeContext.Consumer>
     <div className="card-tag" key={user.id}>
-      <img src={user.avatar_url} alt={`${user.name || user.login} img`} />
+      <img src={user.avatar_url} alt={`${user.name || user.login}`} />
       <h1>{user.name || user.login}</h1>
       <h2 className="card-bio">{user.bio || "Developer"}</h2>
       <h3>Total Repos : {user.public_repos}</h3>
@@ -27,7 +22,6 @@ const CardComponent = ({ user, showLink = false, showAllRepos = false }) => {
         </Link>
       )}
     </div>
-    // </ThemeContext.Consumer>
   );
 };
 
