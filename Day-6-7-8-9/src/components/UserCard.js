@@ -1,14 +1,42 @@
+import { Suspense, useEffect, useState } from "react";
+import { fetchUserData } from "../utils/fetchData";
 import CardComponent from "./CardComponent";
+import SearchBar from "./SearchBar";
+import data from "../data/userGithubDetails.json";
+import Loader from "./Loader";
 
-const UserCard = ({ data }) => {
+const UserCard = () => {
+  const [memberList, setMemberList] = useState([]);
+
+  useEffect(() => {
+    displayUserData();
+  }, []);
+
+  const displayUserData = () => {
+    const output = [];
+    data &&
+      data.map(async (user) => {
+        const url = `https://api.github.com/users/${user.username}`;
+        const userData = await fetchUserData(url);
+        output.push(userData);
+        setMemberList([...memberList, ...output]);
+      });
+  };
+
   return (
-    <div className="card-container">
-      {data.length > 0 &&
-        data.map((item) => {
-          return <CardComponent user={item} showLink />;
-        })}
-      {/* {teamData.length === 0 && <NoResultComponent />} */}
-    </div>
+    <>
+      <SearchBar
+        users={memberList}
+        searchMembers={setMemberList}
+        fetchUserData={displayUserData}
+      />
+      <div className="card-container">
+        {memberList.length > 0 &&
+          memberList.map((item) => {
+            return <CardComponent user={item} showLink />;
+          })}
+      </div>
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { fetchUserData } from "../utils/fetchData";
+import Loader from "./Loader";
 import RepoCard from "./RepoCard";
 import WithRouter from "./WithRouter";
 
@@ -30,10 +31,13 @@ class UserRepoList extends Component {
       <div className="repo-container">
         <h1>My Repo List</h1>
         <div className="repo-list">
-          {userRepos &&
+          {userRepos ? (
             userRepos.map((item) => {
               return <RepoCard card={item} />;
-            })}
+            })
+          ) : (
+            <Loader />
+          )}
         </div>
       </div>
     );

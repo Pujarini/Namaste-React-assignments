@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import stateData from "../data/stateCity.json";
 import { fetchUserData } from "../utils/fetchData";
 import useCityList from "../utils/useCities";
 import CardComponent from "./CardComponent";
 import Loader from "./Loader";
 import NoResultComponent from "./NoResultComponent";
+import ThemeContext from "./ThemeContext";
 
 const SearchComponent = () => {
   const [stateOption, setStateOption] = useState("");
@@ -13,6 +14,8 @@ const SearchComponent = () => {
   const [users, setUsers] = useState([]);
 
   const cities = useCityList(stateOption);
+
+  const { theme } = useContext(ThemeContext);
 
   const fetchGithubUsers = async () => {
     if (cityOption) {
@@ -32,7 +35,11 @@ const SearchComponent = () => {
   };
 
   return (
-    <div className="search_container">
+    <div
+      className={`search_container ${
+        theme === "dark" ? "dark_mode" : "light_mode"
+      }`}
+    >
       <h1>Search Github users by Location</h1>
       <div className="search_user_container">
         <select
