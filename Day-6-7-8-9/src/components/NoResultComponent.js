@@ -1,6 +1,8 @@
 const NoResultComponent = () => {
   return (
-    <span className="no_result_container">No Result Found for this search</span>
+    <span className="text-white text-sm font-bold">
+      No Result Found for this search
+    </span>
   );
 };
 

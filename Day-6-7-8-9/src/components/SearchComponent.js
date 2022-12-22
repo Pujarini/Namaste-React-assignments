@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import stateData from "../data/stateCity.json";
 import { fetchUserData } from "../utils/fetchData";
 import useCityList from "../utils/useCities";
@@ -21,9 +21,9 @@ const SearchComponent = () => {
     if (cityOption) {
       const url = `https://api.github.com/search/users?q=location:${cityOption}`;
       const users = await fetchUserData(url);
+      setLoading(false);
       if (users.items.length > 0) {
         setUsers(users.items);
-        setLoading(false);
       }
     }
   };
@@ -36,18 +36,21 @@ const SearchComponent = () => {
 
   return (
     <div
-      className={`search_container ${
-        theme === "dark" ? "dark_mode" : "light_mode"
+      className={`flex justify-center items-center flex-col h-screen${
+        theme === "light" ? "bg-white text-black" : "bg-slate-900 text-white"
       }`}
     >
-      <h1>Search Github users by Location</h1>
-      <div className="search_user_container">
+      <h1 className="text-yellow-300 m-5 text-3xl">
+        Search Github users by Location
+      </h1>
+      <div className="flex items-center space-between mb-5">
         <select
           value={stateOption}
           onChange={(e) => {
             setStateOption(e.target.value);
             setUsers([]);
           }}
+          className="outline-none border-none mr-3 h-6 rounded-2xl  cursor-pointer text-black"
         >
           {Object.keys(stateData).map((stateName) => {
             return (
@@ -65,6 +68,7 @@ const SearchComponent = () => {
               setCityOption(e.target.value);
               setUsers([]);
             }}
+            className="outline-none border-none mr-3 h-6 rounded-2xl  cursor-pointer text-black"
           >
             {cities &&
               cities.map((city) => {
@@ -76,15 +80,20 @@ const SearchComponent = () => {
               })}
           </select>
         )}
-        <button onClick={fetchUsers}>Search</button>
+        <button
+          onClick={fetchUsers}
+          className="border-none outline-none h-7 p-1 mb-2 mt-1 rounded-md text-md font-medium cursor-pointer bg-yellow-300 text-black text-center"
+        >
+          Search
+        </button>
       </div>
       {users.length > 0 && (
-        <h1>
+        <h1 className="text-yellow-300 m-5 text-3xl">
           List of {users.length} users at {cityOption}
         </h1>
       )}
 
-      <div className="user_list_container">
+      <div className="flex items-center justify-center gap-3 flex-wrap p-6">
         {loading && <Loader />}
         {users.length > 0 ? (
           users.map((user) => {

@@ -28,9 +28,9 @@ class UserRepoList extends Component {
     const { userRepos } = this.state;
     console.log("child - render");
     return (
-      <div className="repo-container">
-        <h1>My Repo List</h1>
-        <div className="repo-list">
+      <div className="flex justify-center items-center gap-4 flex-wrap mt-7">
+        <h1 className="text-2xl text-yellow-300 border-b-2">My Repo List</h1>
+        <div className="flex flex-wrap gap-3 p-10 justify-center">
           {userRepos ? (
             userRepos.map((item) => {
               return <RepoCard card={item} />;

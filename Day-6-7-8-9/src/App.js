@@ -1,4 +1,4 @@
-import React, { Suspense, useContext, useEffect, useState } from "react";
+import React, { Suspense, useContext, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Header from "./components/Header";
@@ -20,11 +20,11 @@ const Home = () => {
   return (
     <div
       className={`home_page  ${
-        theme === "light" ? "light_mode" : "dark_mode "
+        theme === "light" ? "bg-white text-black" : "bg-slate-900 text-white"
       }`}
     >
       <Header />
-      <div className="body">
+      <div className="flex space-between flex-col items-center">
         <Outlet />
       </div>
     </div>

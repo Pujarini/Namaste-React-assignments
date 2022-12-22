@@ -33,7 +33,13 @@ class UserProfile extends Component {
       <ThemeContext.Consumer>
         {({ theme }) => {
           return (
-            <div className={theme === "dark" ? "dark_mode" : "light_mode"}>
+            <div
+              className={
+                theme === "light"
+                  ? "bg-white text-black"
+                  : "bg-slate-900 text-white"
+              }
+            >
               <CardComponent user={userDetails} showLink={false} showAllRepos />
               <Outlet />
             </div>

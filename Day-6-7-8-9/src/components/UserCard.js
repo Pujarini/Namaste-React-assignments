@@ -29,7 +29,7 @@ const UserCard = () => {
         searchMembers={setMemberList}
         fetchUserData={displayUserData}
       />
-      <div className="card-container">
+      <div className="flex space-between items-center flex-wrap gap-5 p-5">
         {memberList.length > 0 &&
           memberList.map((item) => {
             return <CardComponent user={item} showLink />;

@@ -37,29 +37,32 @@ const UserCardInfo = () => {
     return <Loader />;
   } else {
     return (
-      <div className="container">
+      <div className="w-full">
         <div
-          className={`user-container ${
-            theme !== "dark" ? "light_mode" : "dark_mode"
+          className={`flex justify-center items-center flex-col min-h-screen relative p-10 ${
+            theme === "light"
+              ? "bg-white text-black"
+              : "bg-slate-900 text-white"
           } `}
         >
           <img
             src={userData[0]?.avatar_url}
             alt="user_img"
-            className="user-img"
+            className="w-30 h-28 rounded-full absolute top-2"
           />
-          <h1 className="user-title">{userData[0]?.login}</h1>
-          <h3 className="user-bio">{userData[0]?.bio}</h3>
+          <h1 className="mt-20 mb-5 border-b-2 border-b-slate-200 text-4xl">
+            {userData[0]?.login}
+          </h1>
+          <h3 className="text-slate-200 text-lg">{userData[0]?.bio}</h3>
 
           <Link to={`/userprofile/${id}`}>
-            <button>Know me</button>
+            <button className="border-none outline-none h-7 p-1 mb-2 mt-5 rounded-md text-md font-medium cursor-pointer bg-yellow-300 text-black text-center">
+              Know me
+            </button>
           </Link>
 
-          <h1 className="repo-title">My Top repositories</h1>
-
-          {/* <button onClick={() => setTheme("light")}>Theme</button> */}
-
-          <div className="repo-container">
+          <h1 className="mt-2 text-yellow-300 text-3xl">My Top repositories</h1>
+          <div className="flex justify-center items-center gap-4 flex-wrap mt-8 w-full">
             {userRepo &&
               userRepo.map((item) => {
                 return <RepoCard card={item} key={item.id} />;

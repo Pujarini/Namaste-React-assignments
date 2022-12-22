@@ -8,28 +8,24 @@ const Header = () => {
     <ThemeContext.Consumer>
       {({ theme, setTheme }) => {
         return (
-          <div className="header-container">
-            <h2>Avengers Github Details</h2>
-            <div className="links">
+          <div className="h-50 bg-yellow-300 flex justify-between p-2 text-black">
+            <Link to="/">
+              <h2 className="font-bold text-2xl">AVENGERS</h2>
+            </Link>
+
+            <div className="flex space-between">
               <Link to="/searchMembers">
-                <span>Search Avengers</span>
+                <span className="mr-5">Search Avengers</span>
               </Link>
               <Link to="/search">
-                <span>Search Github users by Location</span>
+                <span className="mr-5">Search Github users by Location</span>
               </Link>
               <Link to="/about">
-                <span>About</span>
+                <span className="mr-5">About</span>
               </Link>
-              {/* <span>{theme}</span> */}
               <img
                 src={theme === "dark" ? Moon : Sun}
-                style={{
-                  height: "50px",
-                  width: "50px",
-                  cursor: "pointer",
-                  border: "5px solid black",
-                  borderRadius: "50%",
-                }}
+                className="h-10 w-10 cursor-pointer border-4 border-black rounded-full"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               />
             </div>
