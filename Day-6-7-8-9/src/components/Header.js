@@ -2,8 +2,14 @@ import { Link } from "react-router-dom";
 import ThemeContext from "./ThemeContext";
 import Moon from "../assets/moon.png";
 import Sun from "../assets/sun.png";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../store/loginSlice";
 
 const Header = () => {
+  const loginCreds = useSelector((state) => state.login.value);
+
+  const dispatch = useDispatch();
+
   return (
     <ThemeContext.Consumer>
       {({ theme, setTheme }) => {
@@ -14,15 +20,21 @@ const Header = () => {
             </Link>
 
             <div className="flex space-between">
-              <Link to="/searchMembers">
-                <span className="mr-5">Search Avengers</span>
-              </Link>
-              <Link to="/search">
-                <span className="mr-5">Search Github users by Location</span>
-              </Link>
               <Link to="/about">
                 <span className="mr-5">About</span>
               </Link>
+              {loginCreds.name && loginCreds.password ? (
+                <>
+                  <span className="mr-5">Welcome {loginCreds.name}</span>
+                  <span className="mr-5" onClick={() => dispatch(logout())}>
+                    Logout
+                  </span>
+                </>
+              ) : (
+                <Link to="/login">
+                  <span className="mr-5">Login</span>
+                </Link>
+              )}
               <img
                 src={theme === "dark" ? Moon : Sun}
                 className="h-10 w-10 cursor-pointer border-4 border-black rounded-full"
