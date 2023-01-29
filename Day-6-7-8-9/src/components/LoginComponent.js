@@ -2,7 +2,7 @@ import LoginImg from "../assets/login.svg";
 import { Formik, Form, Field } from "formik";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { login } from "../store/loginSlice";
+import { login } from "../redux/slice/loginSlice";
 
 const LoginComponent = () => {
   const navigate = useNavigate();

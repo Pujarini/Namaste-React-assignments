@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { fetchUserData } from "../utils/fetchData";
-import Loader from "./Loader";
+import Loader from "./loader/Loader";
 import RepoCard from "./RepoCard";
 import WithRouter from "./WithRouter";
 

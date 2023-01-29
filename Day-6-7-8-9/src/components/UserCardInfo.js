@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { fetchUserData } from "../utils/fetchData";
 import Loader from "./Loader";
 import RepoCard from "./RepoCard";
-import ThemeContext from "./ThemeContext";
+import ThemeContext from "../context/ThemeContext";
 
 const UserCardInfo = () => {
   const { id } = useParams();

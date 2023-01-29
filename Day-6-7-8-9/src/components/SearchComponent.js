@@ -5,7 +5,7 @@ import useCityList from "../utils/useCities";
 import CardComponent from "./CardComponent";
 import Loader from "./Loader";
 import NoResultComponent from "./NoResultComponent";
-import ThemeContext from "./ThemeContext";
+import ThemeContext from "../context/ThemeContext";
 
 const SearchComponent = () => {
   const [stateOption, setStateOption] = useState("");

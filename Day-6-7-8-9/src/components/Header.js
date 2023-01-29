@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import ThemeContext from "./ThemeContext";
+import ThemeContext from "../context/ThemeContext";
 import Moon from "../assets/moon.png";
 import Sun from "../assets/sun.png";
 import { useDispatch, useSelector } from "react-redux";
-import { logout } from "../store/loginSlice";
+import { logout } from "../redux/slice/loginSlice";
 
 const Header = () => {
   const loginCreds = useSelector((state) => state.login.value);

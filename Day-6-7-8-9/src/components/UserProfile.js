@@ -2,7 +2,7 @@ import { Component } from "react";
 import { Outlet } from "react-router";
 import { fetchUserData } from "../utils/fetchData";
 import CardComponent from "./CardComponent";
-import ThemeContext from "./ThemeContext";
+import ThemeContext from "../context/ThemeContext";
 import WithRouter from "./WithRouter";
 
 class UserProfile extends Component {

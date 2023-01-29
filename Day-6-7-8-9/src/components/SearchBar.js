@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import ThemeContext from "./ThemeContext";
+import ThemeContext from "../context/ThemeContext";
 
 const SearchBar = ({ searchMembers, users, fetchUserData }) => {
   const [searchText, setSearchText] = useState("");
