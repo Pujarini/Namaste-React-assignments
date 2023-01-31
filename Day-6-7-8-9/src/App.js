@@ -1,7 +1,6 @@
-import React, { Suspense, useContext, useState } from "react";
+import { useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Header from "./components/Header";
 import ThemeContext from "./context/ThemeContext";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";

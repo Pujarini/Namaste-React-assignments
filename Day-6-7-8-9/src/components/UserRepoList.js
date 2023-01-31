@@ -1,8 +1,8 @@
 import React, { Component } from "react";
+import WithRouter from "../hoc/WithRouter";
 import { fetchUserData } from "../utils/fetchData";
 import Loader from "./loader/Loader";
 import RepoCard from "./RepoCard";
-import WithRouter from "./WithRouter";
 
 class UserRepoList extends Component {
   constructor(props) {

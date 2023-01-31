@@ -2,9 +2,9 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { fetchUserData } from "../utils/fetchData";
-import Loader from "./Loader";
 import RepoCard from "./RepoCard";
 import ThemeContext from "../context/ThemeContext";
+import Loader from "./loader/Loader";
 
 const UserCardInfo = () => {
   const { id } = useParams();

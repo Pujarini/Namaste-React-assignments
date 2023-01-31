@@ -1,5 +1,8 @@
+import { useContext } from "react";
+import { useSelector } from "react-redux";
 import { Link, Outlet } from "react-router-dom";
 import Header from "../components/Header";
+import ThemeContext from "../context/ThemeContext";
 
 const Home = () => {
   const { theme } = useContext(ThemeContext);

@@ -3,7 +3,7 @@ import { Outlet } from "react-router";
 import { fetchUserData } from "../utils/fetchData";
 import CardComponent from "./CardComponent";
 import ThemeContext from "../context/ThemeContext";
-import WithRouter from "./WithRouter";
+import WithRouter from "../hoc/WithRouter";
 
 class UserProfile extends Component {
   constructor(props) {

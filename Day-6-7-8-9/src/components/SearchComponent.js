@@ -3,9 +3,9 @@ import stateData from "../data/stateCity.json";
 import { fetchUserData } from "../utils/fetchData";
 import useCityList from "../utils/useCities";
 import CardComponent from "./CardComponent";
-import Loader from "./Loader";
-import NoResultComponent from "./NoResultComponent";
 import ThemeContext from "../context/ThemeContext";
+import Loader from "./loader/Loader";
+import NoResultComponent from "./noresult/NoResultComponent";
 
 const SearchComponent = () => {
   const [stateOption, setStateOption] = useState("");

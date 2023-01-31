@@ -1,16 +1,16 @@
-import { Suspense } from "react";
-import UserCardInfo from "./components/UserCardInfo";
-import { ErrorComponent } from "./components/error/ErrorComponent";
-import UserProfile from "./components/UserProfile";
+import React, { Suspense } from "react";
+import UserCardInfo from "../components/UserCardInfo";
+import ErrorComponent from "../components/error/ErrorComponent";
+import UserProfile from "../components/UserProfile";
 const SearchComponent = React.lazy(() =>
-  import("./components/SearchComponent")
+  import("../components/SearchComponent")
 );
-const UserCard = React.lazy(() => import("./components/UserCard"));
-import AboutUsComponent from "./components/AboutUsComponent";
-import UserRepoList from "./components/UserRepoList";
-import Loader from "./components/Loader";
-import LoginComponent from "./components/LoginComponent";
+const UserCard = React.lazy(() => import("../components/UserCard"));
+import AboutUsComponent from "../components/about/AboutUsComponent";
+import UserRepoList from "../components/UserRepoList";
+import LoginComponent from "../components/LoginComponent";
 import Home from "../pages/Home";
+import Loader from "../components/loader/Loader";
 
 const routeConfig = [
   {
